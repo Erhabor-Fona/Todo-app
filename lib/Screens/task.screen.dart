@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:todo/Widgets/task.list.dart';
 
+import 'add.task.dart';
+
 class TaskScreen extends StatelessWidget {
   const TaskScreen({Key? key}) : super(key: key);
 
@@ -9,7 +11,9 @@ class TaskScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
-      floatingActionButton: FloatingActionButton(onPressed: (){},
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        showModalBottomSheet(context: context, builder: (context)=> AddTask(),);
+      },
       child: Icon(Icons.add, color: Colors.white,),
       backgroundColor: Colors.lightBlueAccent,),
       body: SafeArea(
@@ -36,7 +40,7 @@ class TaskScreen extends StatelessWidget {
                       height: 10.0,
                     ),
                     Text(
-                      'Big Dee',
+                      'FishBone',
                       style: TextStyle(
                           fontSize: 50.0,
                           fontWeight: FontWeight.w700,
