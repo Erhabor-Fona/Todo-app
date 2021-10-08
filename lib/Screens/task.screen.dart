@@ -8,6 +8,9 @@ class TaskScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
+      floatingActionButton: FloatingActionButton(onPressed: (){},
+      child: Icon(Icons.add, color: Colors.white,),
+      backgroundColor: Colors.lightBlueAccent,),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
